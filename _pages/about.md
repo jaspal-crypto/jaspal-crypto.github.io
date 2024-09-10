@@ -17,29 +17,29 @@ Before joining OSU, I graduated with an M.S in Computer Science from Yale Univer
 
 Selected Publications
 ======
-**Privacy-Preserving Regular Expression Matching using NFA**
+**Information-theoretic Multi-server Private Information Retrieval with Client Preprocessing**
+Jaspal Singh, Yu Wei, Vassilis Zikas
+TCC 2024 [(pdf)](https://eprint.iacr.org/2024/780.pdf)
 
+**Privacy-Preserving Regular Expression Matching using TNFA**
 Ning Luo, Chenkai Weng, Jaspal Singh, Gefei Tan, Ruzica Piskac, Mariana Raykova
-
 ESORICS 2024
 
 **Malicious Secure, Structure-Aware Private Set Intersection**
-
-   Gayathri Garimella, Mike Rosulek, Jaspal Singh
-   
-   CRYPTO 2023
+Gayathri Garimella, Mike Rosulek, Jaspal Singh
+CRYPTO 2023
 
 **Structure-Aware Private Set Intersection, With Applications to Fuzzy Matching**
+Gayathri Garimella, Mike Rosulek, Jaspal Singh
+CRYPTO 2022
+   
+**Private set operations from oblivious switching**
+Gayathri Garimella, Payman Mohassel, Mike Rosulek, Saeed Sadeghian, Jaspal Singh
+PKC 2021
 
-   Gayathri Garimella, Mike Rosulek, Jaspal Singh
-   
-   CRYPTO 2022
-   
-^^Private set operations from oblivious switching^^
-
-   Gayathri Garimella, Payman Mohassel, Mike Rosulek, Saeed Sadeghian, Jaspal Singh
-   
-   PKC 2021
+**Large message homomorphic secret sharing from DCR and applications**
+Lawrence Roy, Jaspal Singh
+CRYPTO 2021
 
 Posters
 ------
