@@ -6,7 +6,7 @@ subtitle: <a href='#'>Jaspal SIngh</a>
 
 profile:
   align: right
-  image: pic.jpg
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>756 W Peachtree St NW</p>
