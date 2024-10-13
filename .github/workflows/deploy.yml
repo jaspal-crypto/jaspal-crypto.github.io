@@ -79,6 +79,9 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x' 
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
