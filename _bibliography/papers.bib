@@ -3,113 +3,114 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+
+
+@article{singh2024information,
+  title={Information-theoretic Multi-server Private Information Retrieval with Client Preprocessing},
+  author={Singh, Jaspal and Wei, Yu and Zikas, Vassilis},
+  journal={Theory of Cryptography Conferenc (TCC)},
+  year={2024},
+pdf={https://eprint.iacr.org/2024/780.pdf},
+abstract={    A private information retrieval (PIR) protocol allows a client to fetch any entry from single or multiple servers who hold a public database (of size $n$) 
+while ensuring no server learns any information about the client's query. Initial works on PIR were focused on reducing the communication complexity of 
+PIR schemes. However, standard PIR protocols are often impractical to use in applications involving large databases, due to its inherent large server-side 
+computation complexity, that's at least linear in the database size.  Hence, a line of research has  focused on considering alternative PIR models that can achieve 
+improved server complexity. 
+    
+    The model of private information retrieval with client prepossessing has received a lot of interest beginning with the work due to Corrigan-Gibbs and Kogan (Eurocrypt 2020). 
+In this model, the client interacts with two servers in an offline phase and it stores a local state, which it uses in the online phase to perform PIR queries. Constructions in 
+this model achieve online client/server computation and bandwidth that's sublinear in the database size, at the cost of a one-time expensive offline phase. Till date all known 
+constructions in this model are based on symmetric key primitives or on stronger public key assumptions like Decisional Diffie-Hellman (DDH) and Learning with Error (LWE). 
+This work initiates the study of unconditional PIR with client prepossessing - where we avoid using any cryptographic assumptions. We present a new  PIR protocol for $2t$ servers
+(where $t \in [2,\log_2n/2]$) with threshold 1, where client and server online computation is $\OO(\sqrt{n})$\footnote{the $\OO(.)$ notation hides $\poly\log$ factors} -
+matching the computation costs of other works based on cryptographic assumptions. The client storage and online communication complexity are  $\OO(n^{0.5+1/2t})$ and $\OO(n^{1/2})$
+respectively. Compared to previous works our PIR with client preprocessing protocol also has a very concretely efficient client/server online computation phase - which is 
+dominated by xor operations, compared to cryptographic operations that are orders of magnitude slower. As a building block for our construction, we  introduce a new information-theoretic 
+primitive called \textit{privately multi-puncturable random set }(\pprs), which might be of independent interest. This new primitive can be viewed as a generalization of privately 
+puncturable pseudo-random set, which is the key cryptographic building block used in previous works on PIR with client preprocessing.}
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+
+@inproceedings{luo2024privacy,
+  title={Privacy-Preserving Regular Expression Matching Using TNFA},
+  author={Luo, Ning and Weng, Chenkai and Singh, Jaspal and Tan, Gefei and Raykova, Mariana and Piskac, Ruzica},
+  booktitle={European Symposium on Research in Computer Security (ESORICS)},
+  pages={225--246},
+  year={2024},
+  organization={Springer},
+ pdf={https://eprint.iacr.org/2023/643.pdf},
+abstrct={Motivated by the privacy requirements in network intrusion detection and DNS policy checking,
+we have developed a suite of protocols and algorithms for regular expression matching with enhanced
+privacy: 
+- A new regular expression matching algorithm that is oblivious to the input strings, of which the complexity is only O(mn) where m and n are the length of strings and the regular expression respectively.
+It is achieved by exploiting the structure of the Thompson nondeterministic automata.
+- A zero-knowledge proof of regular expression pattern matching in which a prover generates a proof
+to demonstrate that a public regular expression matches her input string without revealing the string
+itself. 
+- Two secure-regex protocols that ensure the privacy of both the string and regular expression. The
+first protocol is based on the oblivious stack and reduces the complexity of the state-of-the-art from
+O(mn2
+) to O(mn log n). The second protocol relies on the oblivious transfer and performs better
+empirically when the size of regular expressions is smaller than 2^12. 
+We also evaluated our protocols in the context of encrypted DNS policy checking and intrusion detection
+and achieved 4.5X improvements over the state-of-the-art. These results also indicate the practicality of
+our approach in real-world applications.}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+
+
+
+
+@inproceedings{garimella2023malicious,
+  title={Malicious secure, structure-aware private set intersection},
+  author={Garimella, Gayathri and Rosulek, Mike and Singh, Jaspal},
+  booktitle={Annual International Cryptology Conference (CRYPTO)},
+  pages={577--610},
+  year={2023},
+  organization={Springer},
+  abstract={Structure-Aware private set intersection is a variant of PSI where Alice's input set $A$ has some publicly known structure, Bob's input $B$ is an unstructured set of points, and Alice learns the intersection $A \cap B$.
+sa-PSI  was recently introduced by Garimella et al. (Crypto 2022), who described a semi-honest protocol with communication that scales with the description size of Alice's set, instead of its cardinality. 
+In this paper, we present the first sa-PSI protocol secure against malicious adversaries.
+    sa-PSI protocols are built from function secret sharing (FSS) schemes, and the main challenge in our work is ensuring that multiple FSS sharings encode the same structured set.
+We do so using a cut-and-choose approach.In order to make FSS compatible with cut-and-choose, we introduce a new variant of function secret sharing, called  derandomizable FSS (dFSS).
+We show how to construct dFSS for union of geometric balls, leading to a malicious-secure sa-PSI protocol where Alice's input is a union of balls.
+    We also improve prior FSS constructions, giving asymptotic improvements to semi-honest sa-PSI.},
+  pdf={https://eprint.iacr.org/2023/1166.pdf}
+
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+
+
+@inproceedings{garimella2022structure,
+  title={Structure-aware private set intersection, with applications to fuzzy matching},
+  author={Garimella, Gayathri and Rosulek, Mike and Singh, Jaspal},
+  booktitle={Annual International Cryptology Conference (CRYPTO)},
+  pages={323--352},
+  year={2022},
+  abstract = {    In two-party private set intersection (PSI), Alice holds a set $X$, Bob holds a set $Y$, and they learn (only) the contents of $X \cap Y$.
+    We introduce  structure-aware PSI protocols, which take advantage of situations where Alice's set $X$ is publicly known to have a certain structure.
+
+    The goal of structure-aware PSI is to have communication that scales with the  description size of Alice's set, rather its cardinality.
+
+    We introduce a new generic paradigm for structure-aware PSI based on function secret-sharing (FSS).
+    In short, if there exists compact FSS for a class of structured sets, then there exists a semi-honest PSI protocol that supports this class of input sets, with communication cost proportional only to the FSS share size.
+    Several prior protocols for efficient (plain) PSI can be viewed as special cases of our new paradigm, with an implicit FSS for unstructured sets.
+
+    Our PSI protocol can be instantiated from a significantly weaker flavor of FSS, which has not been previously studied.
+    We develop several improved FSS techniques that take advantage of these relaxed requirements, and which are in some cases exponentially better than existing FSS.
+
+    Finally, we explore in depth a natural application of structure-aware PSI.
+    If Alice's set $X$ is the union of many radius-$\delta$ balls in some metric space, then an intersection between $X$ and $Y$ corresponds to fuzzy PSI, in which the parties learn which of their points are within distance $\delta$.
+    In structure-aware PSI, the communication cost scales with the number of balls in Alice's set, rather than their total volume.
+    Our techniques lead to efficient fuzzy PSI for $l_\infty$ and $l_1$ metrics (and approximations of $l_2$ metric) in high dimensions.
+    We implemented this fuzzy PSI protocol for 2-dimensional $l_\infty$ metrics.
+    For reasonable input sizes, our protocol requires 45--60\% less time and 85\% less communication than competing approaches that simply reduce the problem to plain PSI.},
+  pdf={https://eprint.iacr.org/2022/1011.pdf},
+  organization={Springer}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
 
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
-}
+
