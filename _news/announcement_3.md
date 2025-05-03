@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Paper on [Fuzzy PSI] accepted at CCS 2025!
+Paper on efficient fuzzy PSI accepted at CCS 2025!
