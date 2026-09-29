@@ -11,3 +11,9 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
+# Local website development
+.DS_Store
+__pycache__/
+*.zip
+.preview.pid

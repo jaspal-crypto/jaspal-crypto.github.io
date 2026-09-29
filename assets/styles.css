@@ -1,0 +1,129 @@
+/* Desktop layout throughout. See AGENTS.md for the project's design preferences. */
+@font-face {
+  font-family: 'Charter';
+  src: url('fonts/charter-regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Charter';
+  src: url('fonts/charter-italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Charter';
+  src: url('fonts/charter-bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Charter';
+  src: url('fonts/charter-bold-italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('fonts/source-sans-3-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --paper: #fff;
+  --surround: #faf7fb;
+  --ink: #342c39;
+  --muted: #736778;
+  --accent: #81388d;
+  --hover: #5d2468;
+  --rule: #e4dbe8;
+  --tint: #ebdef0;
+  --serif: 'Charter', 'Bitstream Charter', Georgia, serif;
+  --sans: 'Source Sans 3', 'Segoe UI', sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; background: var(--surround); }
+body { position: relative; width: 1040px; min-height: 100vh; margin: 0 auto; background: var(--paper); color: var(--ink); font: 400 16.5px/1.45 var(--serif); -webkit-font-smoothing: antialiased; }
+.shell { width: 960px; margin-inline: auto; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--hover); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+p { margin: 0 0 14px; }
+img { display: block; max-width: 100%; }
+h1, h2, h3 { font-family: var(--sans); font-weight: 600; line-height: 1.3; }
+h1 { margin: 0 0 15px; font-size: 25px; }
+h2 { margin: 0 0 9px; font-size: 20px; }
+h3 { margin: 0 0 3px; font-size: 17px; }
+strong { font-weight: 600; }
+.site-header { display: flex; align-items: baseline; justify-content: space-between; padding: 33px 0 16px; border-bottom: 1px solid var(--rule); }
+.site-name { margin: 0; line-height: 1; }
+.brand { font: 600 31px/1.2 var(--sans); letter-spacing: -.02em; color: var(--ink); text-decoration: none; }
+.brand:hover { color: var(--ink); }
+.site-nav { display: flex; align-items: baseline; gap: 27px; font: 400 16px/1.4 var(--sans); }
+.site-nav a { text-decoration: none; color: var(--muted); padding-bottom: 3px; }
+.site-nav a:hover { color: var(--accent); }
+.site-nav a[aria-current='page'] { color: var(--accent); border-bottom: 1px solid var(--accent); }
+main.shell { padding-block: 24px 40px; }
+.home-grid { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 38px; align-items: start; }
+.profile { font-size: 14px; line-height: 1.45; }
+.portrait { width: 140px; height: 140px; object-fit: cover; object-position: 50% 40%; margin: 0 0 13px; }
+.profile-role { margin-bottom: 4px; font: 600 16px/1.35 var(--sans); }
+.profile-division { margin-bottom: 12px; }
+.affiliation { display: block; margin-top: 3px; }
+.contact-email { display: flex; align-items: center; gap: 5px; }
+.email-image { width: 170px; height: 30px; object-fit: cover; object-position: center 48%; flex: 0 0 auto; }
+.contact-label { flex: 0 0 auto; }
+.contact { margin: 0; font-size: 13.5px; line-height: 1.65; }
+.openings { background: var(--tint); border-left: 2px solid var(--accent); padding: 12px 15px; margin: 20px 0 22px; }
+.openings p { margin: 0; font: 450 16.5px/1.45 var(--sans); }
+.updates { width: 640px; }
+.updates h2 { padding-bottom: 5px; border-bottom: 1px solid var(--rule); margin-bottom: 6px; }
+.news-scroll { max-height: 111px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #aa91b2 transparent; }
+.news-list { list-style: none; padding: 0; margin: 0; }
+.news-list li { display: grid; grid-template-columns: 78px 1fr; gap: 12px; padding: 4px 0; font-size: 16px; line-height: 1.45; }
+.news-list time { color: var(--muted); font: 400 14px/1.65 var(--sans); }
+.research-intro { margin-bottom: 21px; }
+.research-direction { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 26px; padding: 20px 0; border-top: 1px solid var(--rule); align-items: center; }
+.research-figure { margin: 0; display: flex; align-items: center; justify-content: center; }
+.research-figure img { width: 240px; height: auto; }
+.research-direction:first-child .research-figure img { width: 150px; }
+.research-page strong { font-weight: 700; }
+.research-copy h2 { margin-bottom: 7px; }
+.research-copy p { margin: 0; }
+.publication-section + .publication-section { margin-top: 24px; }
+.publication-section > h2 { padding-bottom: 6px; border-bottom: 1px solid var(--rule); margin-bottom: 14px; }
+.publication { margin: 0 0 18px; }
+.publication:last-child { margin-bottom: 0; }
+.publication h3 { color: var(--accent); font-size: 17px; font-weight: 600; margin-bottom: 1px; }
+.author-order { font-size: .75em; line-height: 0; vertical-align: super; }
+.author-legend { display: flex; flex-wrap: wrap; column-gap: 17px; row-gap: 2px; margin: -5px 0 15px; color: var(--muted); font: 400 14px/1.4 var(--sans); }
+.authors { font-size: 16px; line-height: 1.4; margin: 0; }
+.venue { font: 700 14px/1.5 var(--sans); margin: 1px 0 0; color: var(--ink); }
+.paper-links { position: relative; margin-top: 1px; }
+summary { width: fit-content; cursor: pointer; list-style: none; color: var(--accent); font: 400 15px/1.6 var(--sans); min-height: 24px; display: flex; align-items: center; gap: 7px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: ''; width: 0; height: 0; border-left: 3px solid transparent; border-right: 3px solid transparent; border-top: 4px solid currentColor; }
+details[open] > summary::after { transform: rotate(180deg); }
+summary:hover { color: var(--hover); }
+.paper-links > a { position: absolute; top: 0; left: 87px; font: 400 15px/1.6 var(--sans); text-decoration: none; }
+.paper-links > a:hover { text-decoration: underline; }
+.abstract-copy { margin: 6px 0 2px; padding: 8px 12px; border-left: 2px solid var(--rule); font-size: 16px; line-height: 1.45; }
+.abstract-copy p { margin: 0; }
+.course { margin-top: 14px; }
+.course h3 { margin-bottom: 4px; font-size: 18px; }
+.course p { font-size: 16px; margin-bottom: 6px; }
+.course-details { margin-top: 6px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.skip-link { position: absolute; top: -100px; left: 20px; z-index: 1; padding: 6px 12px; background: white; }
+.skip-link:focus { top: 10px; }
+
+.abstract-copy p + p { margin-top: 10px; }
+.abstract-copy ul { margin: 8px 0; padding-left: 22px; }
+.abstract-copy li + li { margin-top: 5px; }
+.abstract-copy math { font-size: 1em; }
