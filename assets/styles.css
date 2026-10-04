@@ -82,6 +82,7 @@ main.shell { padding-block: 24px 40px; }
 .contact { margin: 0; font-size: 13.5px; line-height: 1.65; }
 .openings { background: var(--tint); border-left: 2px solid var(--accent); padding: 12px 15px; margin: 20px 0 22px; }
 .openings p { margin: 0; font: 450 16.5px/1.45 var(--sans); }
+.openings p + p { margin-top: 12px; }
 .updates { width: 640px; }
 .updates h2 { padding-bottom: 5px; border-bottom: 1px solid var(--rule); margin-bottom: 6px; }
 .news-scroll { max-height: 111px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #aa91b2 transparent; }
